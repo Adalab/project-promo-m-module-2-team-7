@@ -34,12 +34,12 @@ body {
   padding-bottom: 20px;
 
   &__title {
-    color: $orange-title;
+    color: $dull-orange;
     font-family: "Merriweather", serif;
   }
 
   &__nav-container {
-    border: solid $orange-title 1.6px;
+    border: solid $dull-orange 1.6px;
     border-radius: 4px;
     width: 100%;
     display: flex;
@@ -62,7 +62,7 @@ body {
         width: 70px;
 
         .list-icon {
-          color: $orange-title;
+          color: $dull-orange;
           size: 22.4px;
         }
       }
