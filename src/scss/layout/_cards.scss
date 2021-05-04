@@ -1,4 +1,4 @@
-.container-cards {
+.cards {
   background-color: #bfcdd0;
   height: 457px;
 }
@@ -6,4 +6,16 @@
   font-family: "Montserrat", sans-serif;
   color: #114e4e;
   font-size: 18px;
+}
+.cards_reset {
+  height: 30px;
+  width: 75px;
+}
+.cards_box {
+  margin-top: 88px;
+  margin-bottom: 40px;
+  height: 329px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
