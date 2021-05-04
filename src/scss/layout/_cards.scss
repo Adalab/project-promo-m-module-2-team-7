@@ -53,6 +53,10 @@
   color: $gunmetal;
   font-size: 18px;
   background-color: white;
+  font-family: "OpenSans";
+}
+.legend-fill {
+  margin-bottom: 22px;
 }
 .user-options {
   font-size: 14px;
@@ -83,6 +87,9 @@
 }
 .formies {
   width: 100%;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  height: 30px;
 }
 .profile-image {
   width: 140px;
@@ -101,6 +108,8 @@
 .image {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 7px;
 }
 .formies {
   border: 1px solid $lightgreen;
