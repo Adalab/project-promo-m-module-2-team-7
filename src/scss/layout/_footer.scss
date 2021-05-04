@@ -1,14 +1,25 @@
 .footer {
-    background-color: $white-three;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $white-two;
-    height: 110px;
+  background-color: $white-three;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $white-two;
+  height: 110px;
 }
 
 .small {
-    font-size: 14px;
-    line-height: 20px;
-    color: $white-two;
-    padding-top: 18px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white-two;
+  padding-top: 18px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .small {
+    padding-left: 41px;
+  }
 }

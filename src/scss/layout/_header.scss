@@ -1,11 +1,22 @@
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 95px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 95px;
 }
 
 .header_logo {
-    width: 417px;
-    height: 107px;
+  width: 250px;
+  height: 63px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-top: 255px;
+  }
+
+  .header_logo {
+    width: 419px;
+    height: 105px;
+  }
 }
