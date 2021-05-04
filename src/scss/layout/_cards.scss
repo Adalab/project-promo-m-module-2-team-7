@@ -1,3 +1,11 @@
+.container {
+  margin-left: 45px;
+  margin-right: 35px;
+  @media (min-width: 768px) {
+    margin: 0 40px;
+  }
+}
+
 .cards {
   background-color: #bfcdd0;
   height: 457px;
