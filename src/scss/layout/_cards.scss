@@ -2,20 +2,43 @@
   background-color: #bfcdd0;
   height: 457px;
 }
-.box_titlle {
+.cards_box-title {
   font-family: "Montserrat", sans-serif;
   color: #114e4e;
   font-size: 18px;
+  margin: 21px 14px 4px 20px;
 }
+
+.cards_box-subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: #54585a;
+  font-size: 16px;
+  margin: 0 0 10px 20px;
+}
+
 .cards_reset {
+  margin: 38px 200px 20px 45px;
+  border-radius: 40px white;
   height: 30px;
   width: 75px;
 }
 .cards_box {
-  margin-top: 88px;
-  margin-bottom: 40px;
+  margin: 0 35px 40px 45px;
   height: 329px;
+  width: 240px;
   background-color: #ffffff;
   display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.cards_box-photo {
+  width: 240px;
+  height: 200px;
+}
+
+.cards_box-socialmedia {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
