@@ -27,9 +27,8 @@ body {
   }
 
   &__nav-container {
-    border: solid $dull-orange 1.6px;
+    border: solid rgba(225, 115, 52, 0.21) 1.6px;
     border-radius: 4px;
-    opacity: 0.21;
     width: 100%;
     display: flex;
     flex-direction: row;

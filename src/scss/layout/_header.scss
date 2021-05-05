@@ -2,9 +2,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 95px;
+  padding-top: 95px;
   @media (min-width: 768px) {
-    margin-top: 255px;
+    padding-top: 255px;
   }
 
   &_logo {
@@ -14,5 +14,12 @@
       width: 419px;
       height: 105px;
     }
+  }
+}
+
+.header-cards {
+  @media (min-width: 768px) {
+    background-color: $white-three;
+    justify-content: flex-start;
   }
 }
