@@ -4,7 +4,7 @@
   justify-content: center;
   padding-top: 95px;
   @media (min-width: 768px) {
-    padding-top: 255px;
+    padding-top: 137px;
   }
 
   &_logo {
@@ -14,12 +14,5 @@
       width: 419px;
       height: 105px;
     }
-  }
-}
-
-.header-cards {
-  @media (min-width: 768px) {
-    background-color: $white-three;
-    justify-content: flex-start;
   }
 }
