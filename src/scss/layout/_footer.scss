@@ -4,8 +4,7 @@
   justify-content: center;
   border: 1px solid $white-two;
   width: 100%;
-  height: 110px;
-
+  height: 143px;
   @media (min-width: 768px) {
     justify-content: space-between;
     height: 60px;
@@ -18,9 +17,4 @@
   line-height: 20px;
   color: $white-two;
   padding-top: 18px;
-}
-
-.footer-landing {
-  position: absolute;
-  bottom: 0;
 }
