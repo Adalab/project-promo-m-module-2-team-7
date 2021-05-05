@@ -1,35 +1,77 @@
 <section class="container cards">
-  <div class="cards_reset"><button>Reset </button></div>
+  <div class="cards_reset"><button>Reset</button></div>
 
   <section class="cards_box">
     <h1 class="cards_box-title">Nombre Apellido</h1>
 
     <h2 class="cards_box-subtitle">Front-end developer</h2>
 
-    <img src="./assets/images/rosalia.jpg" alt="profile-photo" class="cards_box-photo" />
+    <img
+      src="./assets/images/rosalia.jpg"
+      alt="profile-photo"
+      class="cards_box-photo"
+    />
 
     <nav>
       <ul class="cards_box-socialmedia">
-        <li class="cards_box-socialmedia--phone"> telefono</li>
+        <li class="cards_box-socialmedia--phone">telefono</li>
         <li class="cards_box-socialmedia--email">
-          <i class="far fa-envelope"> email</i>
+          <li class="far fa-envelope"> email</li>
         </li>
-        <li class="cards_box-socialmedia--linkedin"> linkedin </li>
-        <li class="cards_box-socialmedia--github"> git</li>
+        <li class="cards_box-socialmedia--linkedin">linkedin</li>
+        <li class="cards_box-socialmedia--github">git</li>
       </ul>
     </nav>
-
   </section>
-
 </section>
-<form>
-  <legend>diseña</legend>
+<!--Azahara-->
+<section class="form">
+<form class="user-options">
+  <h2 class="legend-fill">diseña</h2>
+  <div class="color-design">
+   <div class="color" ><p>COLORES</p></div> 
+   <div class="radio-color">
+    <label class="color-profile">
+      <input class="color" id="color1" type="radio" value="blue" name="bluecolors"> BLUE
+
+      <input 
+      class="color" id="color2" type="radio" value="red" name="redcolors">
+     RED
+      <input 
+      class="color" id="color3" type="radio" value="mixedcolor" name="mixedsolors"> MIX
+    </div>
+    </label>
+  </div>
+</form>
+<form class="info">
+  <h2 class="legend-fill">rellena</h2>
+  <label for="name">
+    Nombre completo <input class="formies" placeholder="Azahara´s team" type="text" name="completename" />
+  </label>
+  <label for="work">
+    Puesto<input class="formies" placeholder="Frontend Unicorn" type="text" name="work" />
+  </label>
+  <p>Imagen de perfil</p>
+  <div class="image">
+  <button class="profile-image">Añadir imagen</button>
+  <button class="buttom-white"></button>
+</div>
+  <p >
+    E-mail<input class="formies"
+      placeholder="azaharagmail.com"
+      type="email"
+      id="emailAddress"
+      name="emailAddress"
+    />
+  </p>
+  <p >
+    Teléfono <input class="formies" placeholder="666666666" type="tel" id="tel" name="tel" />
+  </p>
+  <p >Linkedin<input class="formies"type="text" name="linkedin" /></p>
+  <p>Github<input class="formies" type="text" name="github" /></p>
 </form>
 <form>
-  <legend>rellena</legend>
-  <p>nombre completo<input type="text" name="nombrecompleto" /></p>
-  <p>puesto<input type="text" name="puesto" /></p>
+  <h2 class="legend-fill">comparte</h2>
+  <buttom class="new-card"></buttom>
 </form>
-<form>
-  <legend>comparte</legend>
-</form>
+</section>

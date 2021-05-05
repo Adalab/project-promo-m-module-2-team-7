@@ -1,7 +1,27 @@
+/******* lists **********/
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/****** links *******/
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background-color: $white-four;
 }
 
+<<<<<<< HEAD
 .container {
   margin: 0 35px;
   @media (min-width: 768px) {
@@ -9,3 +29,67 @@ body {
     margin-right: 40px;
   }
 }
+=======
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__title {
+    color: $dull-orange;
+    font-family: "Merriweather", serif;
+  }
+
+  &__nav-container {
+    border: solid $dull-orange 1.6px;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    &___list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .nav-container___list--item {
+        display: flex;
+        flex-direction: column;
+        width: 70px;
+
+        .list-icon {
+          color: $dull-orange;
+          size: 22.4px;
+        }
+      }
+    }
+  }
+  .main-container__link {
+    color: $white-three;
+    background-color: #438792;
+    border: solid #438792;
+    border-radius: 21px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+
+    height: 42px;
+    width: 129px;
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+}
+>>>>>>> 3ec744ee9d69b6f2a3e59c2a46cae79512b462e7
