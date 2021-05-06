@@ -6,16 +6,16 @@
     background-color: $white-four;
   }
 }
-.container .cards {
-  @media (min-width: 768px) {
-    padding-top: 223px;
-  }
-}
 .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   background-color: #bfcdd0;
   height: 457px;
-  width: 100vw;
+
   @media (min-width: 768px) {
+    padding-top: 223px;
     order: 1;
     width: 329px;
     height: 812px;
@@ -23,6 +23,7 @@
     margin: 20px 40px 20px 0;
   }
 }
+
 .cards_box-title {
   font-family: "Montserrat", sans-serif;
   color: #114e4e;
@@ -38,10 +39,16 @@
 }
 
 .cards_button {
+  text-transform: uppercase;
+  font-family: $text;
+  font-size: 12px;
+  color: #54585a;
+  background-color: #bfcdd0;
   margin: 38px 200px 20px 45px;
   height: 30px;
   width: 75px;
-  border-radius: 10px;
+  border: $white-four 1px solid;
+  border-radius: 20px;
 }
 
 .cards_box {
@@ -67,13 +74,15 @@
   height: 54px;
   padding: 10px 62px 12px 20px;
 }
+
 .cards_box-socialmedia--item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 32px;
   height: 32px;
-  // border-radius: 50% $lightgreen;
+  border: $lightgreen solid 2px;
+  border-radius: 32px;
 }
 
 .icon-social {
