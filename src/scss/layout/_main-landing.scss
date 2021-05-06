@@ -1,6 +1,13 @@
 body {
   background-color: $white-four;
 }
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*
 .container {
   margin: 0 35px;
