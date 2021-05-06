@@ -90,11 +90,17 @@ body {
     height: 42px;
     width: 129px;
 
-    margin-top: 15px; ////mirar estos margin para cuadrar footer
+    margin-top: 15px;
     margin-bottom: 30px;
+    transition: background-color ease 0.5s;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: $dull-orange;
+      transform: scale(1.1);
+    }
 
     @media (min-width: 768px) {
-      margin-top: 80px; /* PUEDE QUE SEA RAZÓN POR LA QUE SE DESCOLOCA FOOTER*/
+      margin-top: 80px;
     }
   }
 }
