@@ -160,6 +160,7 @@
   height: 30px;
   margin-left: 10px;
   transform: translate(0, 7px);
+  margin-right: 20px;
 }
 
 .icon2 {
@@ -172,8 +173,9 @@
   margin-right: 10px;
 }
 .ico-scroll {
-  width: 16px;
-  height: 18px;
-  margin-left: 155px;
+  font-size: 17px;
+  margin-left: 204px;
   background-color: white;
+  color: $gunmetal;
+  transform: translate(0, -10px);
 }
