@@ -130,7 +130,6 @@
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  width: 90%;
 }
 .legend-fill {
   font-size: 18px;
@@ -178,13 +177,15 @@
 }
 .list-icon2b {
   color: $dull-orange;
-  transform: translate(0, 3px);
   margin-right: 10px;
 }
 .ico-scroll {
   font-size: 17px;
-  margin-left: 204px;
   background-color: white;
   color: $gunmetal;
-  transform: translate(0, -10px);
+  flex-grow: 1;
+  text-align: right;
+  @media (min-width: 768px) {
+    background-color: $white-four;
+  }
 }
