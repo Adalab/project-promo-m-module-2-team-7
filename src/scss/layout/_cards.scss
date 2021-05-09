@@ -126,7 +126,6 @@
 .radio-color {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
 }
 .info {
   font-size: 14px;
@@ -136,6 +135,7 @@
 .legend-fill {
   font-size: 18px;
   text-transform: uppercase;
+  font-family: $text;
 }
 .legend-fill1 {
   font-size: 18px;
@@ -170,18 +170,18 @@
   height: 30px;
   margin-left: 10px;
   transform: translate(0, 7px);
-  margin-right: 20px;
 }
 
 .icon2 {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid $gunmetal;
+  border-bottom: 1px solid $white-two;
   margin-bottom: 20px;
 }
 .list-icon2b {
   color: $dull-orange;
   margin-right: 10px;
+  font-size: 18px;
 }
 .ico-scroll {
   font-size: 17px;
