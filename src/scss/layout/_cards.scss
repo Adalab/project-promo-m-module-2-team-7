@@ -95,8 +95,8 @@
 
 .form {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 30px;
   padding-top: 27px;
   color: $gunmetal;
   font-size: 18px;
@@ -148,7 +148,12 @@
   margin-bottom: 20px;
   height: 30px;
   border: 1px solid $lightgreen;
+  padding-left: 10px;
 }
+::placeholder {
+  color: #c5c5c5;
+}
+
 .profile-image {
   width: 140px;
   height: 30px;
@@ -196,26 +201,31 @@
 .sharebutton {
   display: flex;
   justify-content: space-evenly;
+  border-bottom: 1px solid $white-two;
 }
 .new-card {
   width: 199px;
   height: 50px;
   background-color: #d5d5d5;
   padding-top: 15px;
-  padding-right: 18px;
   border-radius: 10px;
-  box-shadow: 2px 5px 5px whitesmoke;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.32);
   margin-bottom: 30px;
   color: white;
   text-transform: uppercase;
   padding-left: 17px;
+  font-size: 18px;
   @media (min-width: 768px) {
     background-color: $dull-orange;
   }
 }
+
 .card-done {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $white-two;
 }
 .tarjeta {
   margin: auto;
@@ -223,22 +233,33 @@
 }
 .url {
   color: $dull-orange;
-  font-size: 17px;
+  font-size: 12px;
   margin: auto;
   margin-bottom: 10px;
 }
 .twitter-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 181px;
   height: 30px;
   background-color: #00a0f5;
+  font-size: 14px;
+  text-align: center;
   color: white;
   border-radius: 3px;
-  box-shadow: 2px 5px 5px #00a0f5;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.32);
   margin: auto;
-  margin-bottom: 30px;
-  padding-top: 3px;
+}
+
+.fa-twitter {
+  padding-right: 9.5px;
 }
 .js-hidden {
   display: none;
   /*visibility: hidden;*/
+}
+
+.fill-container {
+  color: $darkgreen;
 }
