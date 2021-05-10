@@ -44,6 +44,7 @@
       <div class="icon2">
         <i class="far fa-object-group list-icon2b"></i>
         <h2 class="legend-fill">diseña</h2>
+        <!-- <button class="ico-scroll js-hidden"><i class="fas fa-angle-up"></i></button> -->
         <button class="ico-scroll"><i class="fas fa-angle-down"></i></button>
       </div>
       <div class="color-design">
@@ -88,69 +89,73 @@
       <div class="icon2">
         <i class="far fa-keyboard list-icon2b"></i>
         <h2 class="legend-fill">rellena</h2>
-        <button class="ico-scroll"><i class="fas fa-angle-down"></i></button>
+        <button class="ico-scroll fill-arrow"><i class="fas fa-angle-down"></i></button>
       </div>
-      <label for="name">
-        Nombre completo
-        <input
-          class="formies"
-          placeholder="Azahara´s team"
-          type="text"
-          name="completename"
-        />
-      </label>
-      <label for="work">
-        Puesto<input
-          class="formies"
-          placeholder="Frontend Unicorn"
-          type="text"
-          name="work"
-        />
-      </label>
-      <p>Imagen de perfil</p>
-      <div class="image">
-        <button class="profile-image">Añadir imagen</button>
-        <button class="buttom-white"></button>
+      <div class="fill-container">
+        <label for="name">
+          Nombre completo
+          <input
+            class="formies"
+            placeholder="Azahara´s team"
+            type="text"
+            name="completename"
+          />
+        </label>
+        <label for="work">
+          Puesto<input
+            class="formies"
+            placeholder="Frontend Unicorn"
+            type="text"
+            name="work"
+          />
+        </label>
+        <p>Imagen de perfil</p>
+        <div class="image">
+          <button class="profile-image">Añadir imagen</button>
+          <button class="buttom-white"></button>
+        </div>
+        <p>
+          E-mail<input
+            class="formies"
+            placeholder="azaharagmail.com"
+            type="email"
+            id="emailAddress"
+            name="emailAddress"
+          />
+        </p>
+        <p>
+          Teléfono
+          <input
+            class="formies"
+            placeholder="666666666"
+            type="tel"
+            id="tel"
+            name="tel"
+          />
+        </p>
+        <p>Linkedin<input class="formies" type="text" name="linkedin" /></p>
+        <p>Github<input class="formies" type="text" name="github" /></p>
       </div>
-      <p>
-        E-mail<input
-          class="formies"
-          placeholder="azaharagmail.com"
-          type="email"
-          id="emailAddress"
-          name="emailAddress"
-        />
-      </p>
-      <p>
-        Teléfono
-        <input
-          class="formies"
-          placeholder="666666666"
-          type="tel"
-          id="tel"
-          name="tel"
-        />
-      </p>
-      <p>Linkedin<input class="formies" type="text" name="linkedin" /></p>
-      <p>Github<input class="formies" type="text" name="github" /></p>
     </form>
     <form>
       <div class="icon2">
         <i class="fas fa-share-alt list-icon2b"></i>
         <h2 class="legend-fill">comparte</h2>
-        <button class="ico-scroll"><i class="fas fa-angle-down"></i></button>
+        <button class="ico-scroll share-arrow"><i class="fas fa-angle-down"></i></button>
       </div>
-      <div class="sharebutton">
-        <buttom class="new-card"
-          ><i class="far fa-object-group list-icon2c"></i>crear tarjeta
-        </buttom>
-      </div>
-      <div class="card-done">
-        <p class="tarjeta">La tarjeta ha sido creada:</p>
-        <p class="url">https://awesome-profile-card.com?id=A456DF0001</p>
-        <buttom class="twitter-share"
-          ><i class="far fa-object-group list-icon2c"></i>Compartir en twitter
-        </buttom>
+      <div class="share-container">
+        <div class="sharebutton">
+          <buttom class="new-card"
+            ><i class="far fa-object-group list-icon2c"></i>crear tarjeta
+          </buttom>
+        </div>
+        <div class="card-done">
+          <p class="tarjeta">La tarjeta ha sido creada:</p>
+          <p class="url">https://awesome-profile-card.com?id=A456DF0001</p>
+          <buttom class="twitter-share"
+            ><i class="far fa-object-group list-icon2c"></i>Compartir en twitter
+          </buttom>
+        </div>
       </div>
     </form>
   </section>
