@@ -8,8 +8,8 @@
 
     <section class="cards_box">
       <div class="cards-box--text">
-        <h1 class="cards_box-title">Nombre Apellido</h1>
-        <h2 class="cards_box-subtitle">Front-end developer</h2>
+        <h1 class="cards_box-title js-preview-name">Nombre Apellido</h1>
+        <h2 class="cards_box-subtitle js-preview-job">Front-end developer</h2>
       </div>
 
       <img
@@ -20,7 +20,7 @@
 
       <ul class="cards_box-socialmedia">
         <li class="cards_box-socialmedia--item">
-          <i class="fas fa-mobile-alt icon-social"></i>
+          <i class="fas fa-mobile-alt icon-social js-preview-phone"></i>
         </li>
 
         <li class="cards_box-socialmedia--item">
@@ -58,7 +58,7 @@
         <div class="radio-color">
           <label>
             <input
-              class="color"
+              class="js-form color"
               id="color1"
               type="radio"
               value="blue"
@@ -68,7 +68,7 @@
           </label>
           <label>
             <input
-              class="color"
+              class="js-form color"
               id="color2"
               type="radio"
               value="red"
@@ -78,7 +78,7 @@
           </label>
           <label>
             <input
-              class="color"
+              class="js-form color"
               id="color3"
               type="radio"
               value="mixedcolor"
@@ -101,21 +101,21 @@
         </button>
       </div>
       <div class="fill-container">
-        <label for="name">
+        <label>
           Nombre completo
           <input
-            class="formies"
+            class="js-form formies"
             placeholder="Blanket Team"
             type="text"
-            name="completename"
+            name="name"
           />
         </label>
-        <label for="work">
+        <label>
           Puesto<input
-            class="formies"
+            class="js-form formies"
             placeholder="Frontend Unicorn"
             type="text"
-            name="work"
+            name="job"
           />
         </label>
         <p>Imagen de perfil</p>
@@ -125,7 +125,7 @@
         </div>
         <p>
           E-mail<input
-            class="formies"
+            class="js-form  formies"
             placeholder="blanket@blanket.com"
             type="email"
             id="emailAddress"
@@ -135,7 +135,7 @@
         <p>
           Teléfono
           <input
-            class="formies"
+            class="js-form js-preview-phone formies"
             placeholder="000000000"
             type="tel"
             id="tel"
@@ -144,7 +144,7 @@
         </p>
         <p>
           Linkedin<input
-            class="formies"
+            class="js-form js-preview-linkedin formies"
             placeholder="Blanket.Linkedin"
             type="text"
             name="linkedin"
@@ -152,7 +152,7 @@
         </p>
         <p>
           Github<input
-            class="formies"
+            class="js-form js-preview-github formies"
             placeholder="Blanket.GitHub"
             type="text"
             name="github"
