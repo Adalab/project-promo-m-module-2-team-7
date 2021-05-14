@@ -13,6 +13,9 @@
   align-items: center;
   width: 100%;
   background-color: #bfcdd0;
+  :hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 768px) {
     order: 1;
@@ -75,6 +78,9 @@
     width: 100%;
     height: 54px;
     padding: 10px 62px 12px 20px;
+    :hover {
+      cursor: pointer;
+    }
     &--item {
       display: flex;
       justify-content: center;
@@ -195,6 +201,9 @@
   color: $gunmetal;
   flex-grow: 1;
   text-align: right;
+  :hover {
+    cursor: pointer;
+  }
   @media (min-width: 768px) {
     background-color: $white-four;
   }
@@ -203,6 +212,9 @@
   display: flex;
   justify-content: space-evenly;
   border-bottom: 1px solid $white-two;
+  :hover {
+    cursor: pointer;
+  }
 }
 .new-card {
   width: 199px;
@@ -263,4 +275,10 @@
 
 .fill-container {
   color: $darkgreen;
+}
+
+.image {
+  :hover {
+    cursor: pointer;
+  }
 }
