@@ -94,6 +94,13 @@
     }
   }
 }
+.border {
+  position: absolute;
+  transform: translate(0, 23px);
+  width: 5px;
+  height: 42px;
+  background-color: $darkgreen;
+}
 
 .icon-social {
   color: $darkgreen;
@@ -178,6 +185,8 @@
   width: 30px;
   height: 30px;
   border: 1px solid $lightgreen;
+  background-size: cover;
+  background-position: center;
   background-color: white;
   margin-left: 20px;
   transform: translate(0, 7.5px);
