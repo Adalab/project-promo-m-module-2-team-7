@@ -163,12 +163,16 @@
 }
 
 .profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 140px;
   height: 30px;
   background-color: $dull-orange;
   color: white;
   border-radius: 5px;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
+  margin-top: 7px;
 }
 .buttom-white {
   width: 30px;
@@ -176,7 +180,7 @@
   border: 1px solid $lightgreen;
   background-color: white;
   margin-left: 20px;
-  transform: translate(0, 9px);
+  transform: translate(0, 7.5px);
 }
 .color-image {
   width: 90px;
@@ -281,6 +285,8 @@
 }
 
 .image {
+  display: flex;
+  flex-direction: row;
   :hover {
     cursor: pointer;
   }
