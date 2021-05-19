@@ -43,18 +43,33 @@
   }
 }
 
-.cards_box-title {
-  font-family: "Montserrat", sans-serif;
-  color: #114e4e;
-  font-size: 18px;
-  margin: 21px 14px 4px 20px;
+.red-title {
+  color: #420101;
+}
+.red-medium {
+  color: #bd1010;
+}
+.red-circle {
+  color: #e95626;
 }
 
-.cards_box-subtitle {
-  font-family: "Montserrat", sans-serif;
-  color: #54585a;
-  font-size: 16px;
-  margin: 0 0 10px 20px;
+.orange-title {
+  color: #3e5b65;
+}
+.orange-medium {
+  color: #eab052;
+}
+.orange-circle {
+  color: #a0c0cf;
+}
+
+.palette-1 {
+  .cards_box--text--title {
+    color: $darkgreen;
+  }
+  .cardsbox--text {
+    border-color: azul;
+  }
 }
 
 .cards_box {
@@ -65,6 +80,18 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  &--text--title {
+    font-family: "Montserrat", sans-serif;
+    color: #114e4e;
+    font-size: 18px;
+    margin: 21px 14px 4px 20px;
+  }
+  &--text--subtitle {
+    font-family: "Montserrat", sans-serif;
+    color: #54585a;
+    font-size: 16px;
+    margin: 0 0 10px 20px;
+  }
   &-photo {
     background-size: cover;
     background-position: center;
@@ -93,17 +120,16 @@
       border-radius: 32px;
     }
   }
-}
-.border {
-  position: absolute;
-  transform: translate(0, 23px);
-  width: 5px;
-  height: 42px;
-  background-color: $darkgreen;
-}
-
-.icon-social {
-  color: $darkgreen;
+  &--border {
+    position: absolute;
+    transform: translate(0, 23px);
+    width: 5px;
+    height: 42px;
+    background-color: $darkgreen;
+  }
+  &-icon-social {
+    color: $darkgreen;
+  }
 }
 
 /* Azahara*/
