@@ -14,7 +14,12 @@ resetAll.addEventListener("click", reset);*/
 
 una vez hecha esta función, que recoge todo, tengo que hacer otra función que restablezca los campos que introduce la usuaria.
 Antes definiría el listener del botón RESET. */
+const cards_button = document.querySelector(".reset-js");
 
-function resetform() {
+function resetForm() {
   document.getElementById("cleanForm").value = "";
+  if (resetForm === "") {
+    cardPreview.innerHTML = "Nombre Completo";
+  }
 }
+cards_button.addEventListener("click", resetForm());
