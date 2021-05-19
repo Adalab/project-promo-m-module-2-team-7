@@ -76,7 +76,7 @@ for (const eachInput of formInputList) {
 const cardPreview = document.querySelector(".js-card_box");
 const paletteRadios = document.querySelectorAll(".js-palette");
 
-function handlerChange(ev) {
+function handlerChangeColor(ev) {
   cardPreview.classList.remove("palette-1", "palette-2", "palette-3");
   if (ev.target.value === "blue") {
     cardPreview.classList.add("palette-1");
