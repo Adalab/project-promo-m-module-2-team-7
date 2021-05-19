@@ -84,8 +84,8 @@ body {
     height: 42px;
     width: 129px;
 
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 20%;
+    margin-bottom: 10%;
     transition: background-color ease 0.5s;
     transition: all 0.5s ease-in-out;
     &:hover {
@@ -94,7 +94,7 @@ body {
     }
 
     @media (min-width: 768px) {
-      margin-top: 80px;
+      margin-top: 5%;
     }
   }
 }
