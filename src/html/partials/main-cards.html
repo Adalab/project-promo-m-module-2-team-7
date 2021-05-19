@@ -1,7 +1,7 @@
 <section class="main_container">
   <section class="cards">
     <div>
-      <button class="cards_button" type="reset" value="resetinfo">
+      <button class="cards_button reset-js" type="reset" onclick="reset" value="resetinfo">
         <i class="far fa-trash-alt"></i> Reset
       </button>
     </div>
@@ -44,8 +44,8 @@
   </section>
 
   <!--Azahara-->
-  <section class="form">
-    <form class="user-options">
+  <form class="form" id="cleanForm">
+    <fieldset class="user-options">
       <div class="icon2">
         <i class="far fa-object-group list-icon2b"></i>
         <h2 class="legend-fill">diseña</h2>
@@ -60,7 +60,7 @@
         <div class="color-container">
           <p>COLORES</p>
         </div>
-        <div class="radio-color">
+        <div class="radio-color" id="formCard">
           <label>
             <input class="js-form js-palette color" id="color1" type="radio" value="blue" name="colors" />
             <img class="color-image" src="./assets/images/Blue.jpg" />
@@ -75,8 +75,8 @@
           </label>
         </div>
       </div>
-    </form>
-    <form class="info">
+    </fieldset>
+    <fieldset class="info">
       <div class="icon2">
         <i class="far fa-keyboard list-icon2b"></i>
         <h2 class="legend-fill">rellena</h2>
@@ -87,7 +87,7 @@
           <i class="fas fa-angle-down"></i>
         </button>
       </div>
-      <div class="fill-container">
+      <div class="fill-container" id="formCard">
         <label>
           Nombre completo
           <input class="js-form formies" placeholder="Blanket Team" type="text" name="name" />
@@ -97,7 +97,7 @@
         </label>
         <p>Imagen de perfil</p>
 
-        <div class="image">
+        <div class="image" id="formCard">
           <label class="profile-image" for="img-selector">Añadir Imagen</label>
           <input type="file" name="" id="img-selector" class="js-hidden js__profile-upload-btn" />
           <div class="buttom-white js__profile-image"></div>
@@ -105,24 +105,24 @@
 
         <div>
           <p>
-            E-mail<input class="js-form formies" placeholder="blanket@blanket.com" type="email" id="emailAddress"
+            E-mail<input class="js-form formies" placeholder="blanket@blanket.com" type="email" id="mail"
               name="emailAddress" />
           </p>
           <p>
             Teléfono
-            <input class="js-form js-preview-phone formies" placeholder="000000000" type="tel" id="tel" name="tel" />
+            <input class="js-form js-preview-phone formies" placeholder="000000000" type="tel" id="phone" name="tel" />
           </p>
           <p>
             Linkedin<input class="js-form js-preview-linkedin formies" placeholder="Blanket.Linkedin" type="text"
-              name="linkedin" />
+              name="linkedin" id="formCard" />
           </p>
           <p>
             Github<input class="js-form js-preview-github formies" placeholder="Blanket.GitHub" type="text"
-              name="github" />
+              name="github" id="formCard" />
           </p>
         </div>
       </div>
-    </form>
+    </fieldset>
     <div class="icon2">
       <i class="fas fa-share-alt list-icon2b"></i>
       <h2 class="legend-fill">comparte</h2>
@@ -137,13 +137,12 @@
       <div class="sharebutton">
         <buttom class="new-card js-create-card"><i class="far fa-address-card list-icon2c"></i> Crear tarjeta</buttom>
       </div>
-      <div class="js-response"></div>
-      <div class="card-done">
+      <div class="card-done js-hidden">
         <p class="tarjeta">La tarjeta ha sido creada:</p>
         <p class="url">https://awesome-profile-card.com?id=A456DF0001</p>
         <buttom class="twitter-share"><i class="fab fa-twitter list-icon2c"></i>Compartir en twitter
         </buttom>
       </div>
     </div>
-  </section>
 </section>
+</form>
