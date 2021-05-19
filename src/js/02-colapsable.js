@@ -1,86 +1,52 @@
 'use strict';
 
 console.log('>> Ready :)');
-const buttonArrowDown = document.querySelector(".ico-scroll");
-const buttonArrowFill = document.querySelector(".fill-arrow");
-const buttonArrowShare = document.querySelector(".share-arrow");
-const buttonCreate = document.querySelector(".new-card");
+
+const arrowUpDesign = document.querySelector(".js-arrow-up-d");
+const arrowDownDesign = document.querySelector(".js-arrow-down-d");
+
+const arrowUpFill = document.querySelector(".js-arrow-up-f");
+const arrowDownFill = document.querySelector(".js-arrow-down-f");
+
+const arrowUpShare = document.querySelector(".js-arrow-up-s");
+const arrowDownShare = document.querySelector(".js-arrow-down-s");
 
 const infoPage = document.querySelector(".color-design");
 const fillPage = document.querySelector(".fill-container");
 const sharePage = document.querySelector(".share-container");
+
+const designTitle = document.querySelector(".js-design-title");
+const fillTitle = document.querySelector(".js-fill-title2");
+const shareTitle = document.querySelector(".js-share-title3");
+
 const finishedCard = document.querySelector(".card-done");
 
-
-//función para esconder elementos
-function hiddenSection (event) {
-event.preventDefault(); // hace que al desclicar el botón, la función siga funcionando
-
-infoPage.classList.toggle("js-hidden");
-console.log("hola");
-    
-}
-
-buttonArrowDown.addEventListener("click", hiddenSection);
-
-
-//RELLENA
-
-function hiddenSectionFill (event) {
-    event.preventDefault(); // hace que al desclicar el botón, la función siga funcionando
-    
-    fillPage.classList.toggle("js-hidden");
-    console.log("hola");
-        
-    }
-
-buttonArrowFill.addEventListener("click", hiddenSectionFill);
-
-
-// COMPARTE
-
-function hiddenSectionShare (event) {
-    event.preventDefault(); // hace que al desclicar el botón, la función siga funcionando
-    
+function hideShare (ev) {
+    ev.preventDefault();
     sharePage.classList.toggle("js-hidden");
-    console.log("hola");
-        
+    arrowDownShare.classList.toggle("js-hidden");
+    arrowUpShare.classList.toggle("js-hidden");
     }
-buttonArrowShare.addEventListener("click", hiddenSectionShare);
 
 
-// crear tarjeta
-
-function handlerCreateBtn (event) {
-    event.preventDefault();
-    finishedCard.classList.remove("js-hidden");
-}
-
-buttonCreate.addEventListener("click", handlerCreateBtn)
-
-/*
-//función global para todas secciones
-function hideSection (section) {
-    // hace que al desclicar el botón, la función siga funcionando
-    
-    section.classList.toggle("js-hidden");
-    console.log("hola,estoy funcionando");
+function hideFill (ev) {
+    ev.preventDefault();
+    fillPage.classList.toggle("js-hidden");
+    arrowDownFill.classList.toggle("js-hidden");
+    arrowUpFill.classList.toggle("js-hidden");
         
     }
 
-function handleClick (event){
-    event.preventDefault();
-    const sectionTarget = event.current.target;
 
-    hideSection (sectionTarget)
-    console.log(sectionTarget);
-    //hideSection (event, fillPage);
-    //hideSection (event, sharePage);
-}
-
+function hideSDesign (ev) {
+    ev.preventDefault();
+    infoPage.classList.toggle("js-hidden");
+    arrowUpDesign.classList.toggle("js-hidden");
+    arrowDownDesign.classList.toggle("js-hidden");
+        
+    }
 
 
-buttonArrowDown.addEventListener("click", handleClick);
-buttonArrowFill.addEventListener("click", handleClick);
-buttonArrowShare.addEventListener("click", handleClick);
-*/
+designTitle.addEventListener("click", hideSDesign);
+fillTitle.addEventListener("click", hideFill);
+shareTitle.addEventListener("click", hideShare);
