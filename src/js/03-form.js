@@ -20,35 +20,40 @@ const data = {
   github: "",
   photo: "",
 };
+const placeholderData = {
+  name: "Nombre Apellido",
+  job: "Front-end developer",
+};
 
 function handleChangeForm(ev) {
   // 1. Cojo el nuevo valor y lo guardo en una variable
+  // 2. Re-pinto la tarjeta de preview
 
   const inputNameChanged = ev.target.name;
   const inputValueChanged = ev.target.value;
 
   if (inputNameChanged === "name") {
     data.name = inputValueChanged;
+    previewNameElement.innerHTML = data.name || placeholderData.name;
   } else if (inputNameChanged === "job") {
     data.job = inputValueChanged;
+    previewJobElement.innerHTML = data.job;
+    previewJobElement.innerHTML = data.job || placeholderData.job;
   } else if (inputNameChanged === "mail") {
+    // TODO: igual que linkedin
     data.mail = inputValueChanged;
+    previewMailElement.href = `mailto:${data.main}`;
   } else if (inputNameChanged === "phone") {
+    // TODO: igual que linkedin
     data.phone = inputValueChanged;
+    previewPhoneElement.href = `tel:${data.phone}`;
   } else if (inputNameChanged === "linkedin") {
     data.linkedin = inputValueChanged;
+    previewLinkedinElement.href = `https://linkedin.com/${data.linkedin}`;
   } else if (inputNameChanged === "github") {
     data.github = inputValueChanged;
+    previewGithubElement.href = `https://github.com/${data.github}`;
   }
-
-  // 2. Re-pinto la tarjeta de preview
-
-  previewNameElement.innerHTML = data.name;
-  previewJobElement.innerHTML = data.job;
-  previewMailElement.href = `mailto:${data.main}`;
-  previewPhoneElement.href = `tel:${data.phone}`;
-  previewLinkedinElement.href = `https://linkedin/${data.linkedin}`;
-  previewGithubElement.href = `https://github/${data.github}`;
 
   /*
   const inputChanged = ev.target;
