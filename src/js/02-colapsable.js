@@ -20,6 +20,8 @@ const fillTitle = document.querySelector(".js-fill-title2");
 const shareTitle = document.querySelector(".js-share-title3");
 
 const finishedCard = document.querySelector(".card-done");
+const createCardBtn = document.querySelector(".js-create-card");
+
 
 function hideShare (ev) {
     ev.preventDefault();
@@ -50,3 +52,11 @@ function hideSDesign (ev) {
 designTitle.addEventListener("click", hideSDesign);
 fillTitle.addEventListener("click", hideFill);
 shareTitle.addEventListener("click", hideShare);
+
+
+function showFinishedCard () {
+    finishedCard.classList.remove("js-hidden");
+
+}
+
+createCardBtn.addEventListener("click", showFinishedCard);
