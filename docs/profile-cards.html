@@ -34,9 +34,9 @@
     <section class="main_container">
       <section class="cards">
         <div>
-          <input class="cards_button reset-js" type="reset" onclick="reset" value="resetinfo">
+          <button class="cards_button reset-js" onclick="resetAll()" value="resetinfo">
             <i class="far fa-trash-alt"></i> Reset
-        </input>
+          </button>
         </div>
         <section class="cards_box js-card_box palette-1">
           <div class="cards_box-border js-border"></div>
@@ -60,15 +60,15 @@
             </li>
 
             <li class="cards_box-socialmedia--item">
-              <i class="fab fa-linkedin-in cards_box-icon-social js-social">
-                <a href=""></a>
-              </i>
+              <a class="js-preview-linkedin" target="_blank" href="">
+                <i class="fab fa-linkedin-in cards_box-icon-social js-social"></i>
+              </a>
             </li>
 
             <li class="cards_box-socialmedia--item">
-              <i class="fab fa-github-alt cards_box-icon-social js-social">
-                <a href=""></a>
-              </i>
+              <a class="js-preview-github" target="_blank" href="">
+                <i class="fab fa-github-alt cards_box-icon-social js-social"></i>
+              </a>
             </li>
           </ul>
         </section>
@@ -76,11 +76,8 @@
 
       <!--Azahara-->
       <form class="form" id="cleanForm">
-        <div>
-          <input class="cards_button reset-js" id="buttonInv" type="reset" onclick="reset" value="resetInfo"> </input>
-        </div>
         <fieldset class="user-options">
-          <div class="icon2 js-design-title">
+          <div class="icon2 js-design-title item-collapsable">
             <i class="far fa-object-group list-icon2b"></i>
             <h2 class="legend-fill">diseña</h2>
             
@@ -96,9 +93,9 @@
             <div class="color-container">
               <p>COLORES</p>
             </div>
-            <div class="radio-color" id="formCard">
+            <div class="radio-color">
               <label>
-                <input class="js-form js-palette color" id="color1" type="radio" value="blue" name="colors" />
+                <input class="js-form js-palette color" id="color1" type="radio" value="blue" name="colors" checked />
                 <img class="color-image" src="./assets/images/Blue.jpg" />
               </label>
               <label>
@@ -113,7 +110,7 @@
           </div>
         </fieldset>
         <fieldset class="info">
-          <div class="icon2 js-fill-title2">
+          <div class="icon2 js-fill-title2 item-collapsable">
             <i class="far fa-keyboard list-icon2b"></i>
             <h2 class="legend-fill">rellena</h2>
             
@@ -125,7 +122,7 @@
             </button>
 
           </div>
-          <div class="fill-container" id="formCard">
+          <div class="fill-container">
             <label>
               Nombre completo
               <input class="js-form formies" placeholder="Blanket Team" type="text" name="name" />
@@ -135,10 +132,10 @@
             </label>
             <p>Imagen de perfil</p>
 
-            <div class="image" id="formCard">
+            <div class="image">
               <label class="profile-image" for="img-selector">Añadir Imagen</label>
               <input type="file" name="" id="img-selector" class="js-hidden js__profile-upload-btn" />
-              <div class="buttom-white js__profile-image"></div>
+              <div class="button-white js__profile-image"></div>
             </div>
 
             <div>
@@ -151,17 +148,17 @@
                 <input class="js-form js-preview-phone formies" placeholder="000000000" type="tel" id="phone" name="tel" />
               </p>
               <p>
-                Linkedin<input class="js-form js-preview-linkedin formies" placeholder="Blanket.Linkedin" type="text"
-                  name="linkedin" id="formCard" />
+                Linkedin<input class="js-form formies" placeholder="Blanket.Linkedin" type="text"
+                  name="linkedin" />
               </p>
               <p>
-                Github<input class="js-form js-preview-github formies" placeholder="Blanket.GitHub" type="text"
-                  name="github" id="formCard" />
+                Github<input class="js-form formies" placeholder="Blanket.GitHub" type="text"
+                  name="github" />
               </p>
             </div>
           </div>
         </fieldset>
-        <div class="icon2 js-share-title3">
+        <div class="icon2 js-share-title3 item-collapsable">
           <i class="fas fa-share-alt list-icon2b"></i>
           <h2 class="legend-fill">comparte</h2>
           
@@ -175,13 +172,13 @@
         </div>
         <div class="share-container">
           <div class="sharebutton">
-            <buttom class="new-card js-create-card"><i class="far fa-address-card list-icon2c"></i> Crear tarjeta</buttom>
+            <button class="new-card js-create-card"><i class="far fa-address-card list-icon2c"></i> Crear tarjeta</button>
           </div>
           <div class="card-done js-hidden">
             <p class="tarjeta">La tarjeta ha sido creada:</p>
             <p class="url">https://awesome-profile-card.com?id=A456DF0001</p>
-            <buttom class="twitter-share"><i class="fab fa-twitter list-icon2c"></i>Compartir en twitter
-            </buttom>
+            <button class="twitter-share"><i class="fab fa-twitter list-icon2c"></i>Compartir en twitter
+            </button>
           </div>
         </div>
     </section>
