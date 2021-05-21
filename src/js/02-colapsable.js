@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-console.log('>> Ready :)');
+console.log(">> Ready :)");
 
 const arrowUpDesign = document.querySelector(".js-arrow-up-d");
 const arrowDownDesign = document.querySelector(".js-arrow-down-d");
@@ -20,43 +20,41 @@ const fillTitle = document.querySelector(".js-fill-title2");
 const shareTitle = document.querySelector(".js-share-title3");
 
 const finishedCard = document.querySelector(".card-done");
+const sharedContainer = document.querySelector(".sharebutton");
 const createCardBtn = document.querySelector(".js-create-card");
 
+// Abrimos o cerramos los collapsables por defecto
+hideFill();
+hideShare();
 
-function hideShare (ev) {
-    ev.preventDefault();
-    sharePage.classList.toggle("js-hidden");
-    arrowDownShare.classList.toggle("js-hidden");
-    arrowUpShare.classList.toggle("js-hidden");
-    }
+function hideShare(ev) {
+  if (ev) ev.preventDefault();
+  sharePage.classList.toggle("js-hidden");
+  arrowDownShare.classList.toggle("js-hidden");
+  arrowUpShare.classList.toggle("js-hidden");
+}
 
+function hideFill(ev) {
+  if (ev) ev.preventDefault();
+  fillPage.classList.toggle("js-hidden");
+  arrowDownFill.classList.toggle("js-hidden");
+  arrowUpFill.classList.toggle("js-hidden");
+}
 
-function hideFill (ev) {
-    ev.preventDefault();
-    fillPage.classList.toggle("js-hidden");
-    arrowDownFill.classList.toggle("js-hidden");
-    arrowUpFill.classList.toggle("js-hidden");
-        
-    }
-
-
-function hideSDesign (ev) {
-    ev.preventDefault();
-    infoPage.classList.toggle("js-hidden");
-    arrowUpDesign.classList.toggle("js-hidden");
-    arrowDownDesign.classList.toggle("js-hidden");
-        
-    }
-
+function hideSDesign(ev) {
+  ev.preventDefault();
+  infoPage.classList.toggle("js-hidden");
+  arrowUpDesign.classList.toggle("js-hidden");
+  arrowDownDesign.classList.toggle("js-hidden");
+}
 
 designTitle.addEventListener("click", hideSDesign);
 fillTitle.addEventListener("click", hideFill);
 shareTitle.addEventListener("click", hideShare);
 
-
-function showFinishedCard () {
-    finishedCard.classList.remove("js-hidden");
-
+function showFinishedCard() {
+  sharedContainer.classList.add("js-hidden");
+  finishedCard.classList.remove("js-hidden");
 }
 
 createCardBtn.addEventListener("click", showFinishedCard);
