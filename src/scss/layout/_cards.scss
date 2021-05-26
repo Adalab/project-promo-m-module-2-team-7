@@ -13,6 +13,7 @@
   align-items: center;
   width: 100%;
   background-color: #bfcdd0;
+
   :hover {
     cursor: pointer;
   }
@@ -25,7 +26,7 @@
     margin: 20px 40px 20px 0;
   }
   @media (min-width: 1024px) {
-    width: 585px;
+    width: 1500px;
     padding-right: 213px;
     padding-left: 173px;
   }
@@ -105,6 +106,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
   &--text--title {
     font-family: "Montserrat", sans-serif;
     color: #114e4e;
@@ -334,6 +336,7 @@
   border-radius: 3px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.32);
   margin: auto;
+  cursor: pointer;
 }
 
 .fa-twitter {
