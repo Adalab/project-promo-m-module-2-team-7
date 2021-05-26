@@ -90,3 +90,25 @@ body {
 
 #buttonInv {
 }
+
+.blanketfy-btn {
+  width: 150px;
+  height: 150px;
+  border: solid 2px #fae5e7;
+  border-radius: 25px;
+  background-color: $white-three;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  transition: background-color ease 0.5s;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: rgb(235, 117, 186);
+    background-color: #fae5e7;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .blanketfy-img-btn {
+    width: 95%;
+  }
+}
