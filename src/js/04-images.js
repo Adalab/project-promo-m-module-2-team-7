@@ -32,6 +32,7 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   data.photo = fr.result;
+  saveInLocalStorage();
 }
 
 /**
@@ -48,3 +49,10 @@ function fakeFileClick() {
  * - al campo oculto para cuando cambie su value
  */
 fileField.addEventListener("change", getImage);
+
+/*update image*/
+
+function updatePhoto(userData) {
+  profileImage.style.backgroundImage = `url(${userData.photo}})`;
+  profilePreview.style.backgroundImage = `url(${userData.photo})`;
+}

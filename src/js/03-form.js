@@ -9,12 +9,14 @@ const previewMailElement = document.querySelector(".js-preview-mail");
 const previewPhoneElement = document.querySelector(".js-preview-phone");
 const previewLinkedinElement = document.querySelector(".js-preview-linkedin");
 const previewGithubElement = document.querySelector(".js-preview-github");
+const cardPreview = document.querySelector(".js-card_box");
+const paletteRadios = document.querySelectorAll(".js-palette");
 
 let data = {
   palette: "",
   name: "",
   job: "",
-  mail: "",
+  email: "",
   phone: "",
   linkedin: "",
   github: "",
@@ -37,12 +39,11 @@ function handleChangeForm(ev) {
     previewNameElement.innerHTML = data.name || placeholderData.name;
   } else if (inputNameChanged === "job") {
     data.job = inputValueChanged;
-    previewJobElement.innerHTML = data.job;
     previewJobElement.innerHTML = data.job || placeholderData.job;
   } else if (inputNameChanged === "mail") {
     // TODO: igual que linkedin
-    data.mail = inputValueChanged;
-    previewMailElement.href = `mailto:${data.main}`;
+    data.email = inputValueChanged;
+    previewMailElement.href = `mailto: maria_zubeldia@hotmail.com`;
   } else if (inputNameChanged === "phone") {
     // TODO: igual que linkedin
     data.phone = inputValueChanged;
@@ -80,18 +81,19 @@ for (const eachInput of formInputList) {
 
 //Prueba del check de los colores para que cambie la tarjeta
 
-const cardPreview = document.querySelector(".js-card_box");
-const paletteRadios = document.querySelectorAll(".js-palette");
-
 function handlerChangeColor(ev) {
   cardPreview.classList.remove("palette-1", "palette-2", "palette-3");
   if (ev.target.value === "blue") {
+    data.palette = 1;
     cardPreview.classList.add("palette-1");
   } else if (ev.target.value === "red") {
+    data.palette = 2;
     cardPreview.classList.add("palette-2");
   } else if (ev.target.value === "mixedcolor") {
+    data.palette = 3;
     cardPreview.classList.add("palette-3");
   }
+  saveInLocalStorage();
 }
 
 for (const radio of paletteRadios) {
@@ -100,50 +102,40 @@ for (const radio of paletteRadios) {
 
 // Enviar al servidor clase de Iván
 const createBtn = document.querySelector(".js-create-card");
-const responseElement = document.querySelector(".js-response");
-
-function handlerCreateCard(event) {
-  event.preventDefault();
-
-  //HAY QUE PONER LAS CONDICIONES SI EL NOMBRE ESTA VACIO O EL PUESTO, EL ULTIMO ELSE ES ES FECTH
-
-  fetch("https://awesome-profile-cards.herokuapp.com/card", {
-    method: "POST",
-    mode: "cors",
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success === false) {
-        responseElement.innerHTML = "Tienes que rellenar los datos";
-        responseElement.classList.remove("hidden");
-      } else {
-        responseElement.innerHTML = `<a href= "${data.cardURL}">Direccion`;
-        responseElement.classList.remove("hidden");
-      }
-    });
-}
-
-createBtn.addEventListener("click", handlerCreateCard);
 
 function updateValuesInputs(userData) {
   console.log("holi update values");
   //1 coger cada input
   document.querySelector(".js-name").value = userData.name;
   document.querySelector(".js-job").value = userData.job;
-  document.querySelector(".js-mail").value = userData.mail;
+  document.querySelector(".js-mail").value = userData.email;
   document.querySelector(".js-phone").value = userData.phone;
   document.querySelector(".js-linkedin").value = userData.linkedin;
   document.querySelector(".js-github").value = userData.github;
 }
-const colorPalette1 = document.querySelector(".js-color1");
-const colorPalette2 = document.querySelector(".js-color2");
-const colorPalette3 = document.querySelector(".js-color3");
 
 function updatePallete(userData) {
   console.log("holi caracolis update palettes");
+  cardPreview.classList.remove("palette-1", "palette-2", "palette-3");
+  if (userData.palette === 1) {
+    cardPreview.classList.add("palette-1");
+    document.querySelector(".js-color1").checked = true;
+    document.querySelector(".js-color2").checked = false;
+    document.querySelector(".js-color3").checked = false;
+  } else if (userData.palette === 2) {
+    document.querySelector(".js-color1").checked = false;
+    document.querySelector(".js-color2").checked = true;
+    document.querySelector(".js-color3").checked = false;
+    cardPreview.classList.add("palette-2");
+  } else if (userData.palette === 3) {
+    document.querySelector(".js-color1").checked = false;
+    document.querySelector(".js-color2").checked = false;
+    document.querySelector(".js-color3").checked = true;
+    cardPreview.classList.add("palette-3");
+  }
+}
 
-  colorPalette1.value = userData.palette;
-  colorPalette2.value = userData.palette;
-  colorPalette3.value = userData.palette;
+function updateCard(userData) {
+  previewNameElement.innerHTML = userData.name;
+  previewJobElement.innerHTML = userData.job;
 }

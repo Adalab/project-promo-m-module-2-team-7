@@ -13,7 +13,8 @@ function getFromLocalStorage() {
     //llebar info de los inputs
     updateValuesInputs(userData);
     updatePallete(userData);
-    //updatePhoto();
+    updatePhoto(userData);
+    updateCard(userData);
   }
 }
 
