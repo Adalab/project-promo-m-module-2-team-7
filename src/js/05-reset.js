@@ -8,12 +8,15 @@ const cards_button = document.querySelector(".reset-js");
 const inputsForm = document.querySelectorAll(".js-form");
 
 function resetForm() {
+  console.log("limpiando");
   document.getElementById("cleanForm").value = "";
   if (resetForm === "") {
     cardPreview.innerHTML = "Nombre Completo";
+    //limpiar imagen
+    profileImage.style.backgroundImage = 'url("../images/uni.png");'; //resetear imagen, queda resetearla del formulario
   }
 }
-cards_button.addEventListener("click", resetForm());
+cards_button.addEventListener("click", resetForm);
 
 function resetAll() {
   inputsForm.forEach((el) => {
@@ -23,7 +26,7 @@ function resetAll() {
   // Reseteamos la tarjeta
   previewNameElement.innerHTML = placeholderData.name;
   previewJobElement.innerHTML = placeholderData.job;
-  profileImage.style.backgroundImage = 'url("../images/uni.png");'; //resetear imagen, queda resetearla del formulario
+  profilePreview.style.backgroundImage = 'url("../images/uni.png");'; //resetear imagen, queda resetearla del formulario
 
   // TODO: Repetir con el resto de campos
 }

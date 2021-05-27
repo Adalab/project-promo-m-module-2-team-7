@@ -10,8 +10,8 @@ const previewPhoneElement = document.querySelector(".js-preview-phone");
 const previewLinkedinElement = document.querySelector(".js-preview-linkedin");
 const previewGithubElement = document.querySelector(".js-preview-github");
 
-const data = {
-  palette: 1,
+let data = {
+  palette: "",
   name: "",
   job: "",
   mail: "",
@@ -54,6 +54,8 @@ function handleChangeForm(ev) {
     data.github = inputValueChanged;
     previewGithubElement.href = `https://github.com/${data.github}`;
   }
+
+  saveInLocalStorage();
 
   /*
   const inputChanged = ev.target;
@@ -123,3 +125,25 @@ function handlerCreateCard(event) {
 }
 
 createBtn.addEventListener("click", handlerCreateCard);
+
+function updateValuesInputs(userData) {
+  console.log("holi update values");
+  //1 coger cada input
+  document.querySelector(".js-name").value = userData.name;
+  document.querySelector(".js-job").value = userData.job;
+  document.querySelector(".js-mail").value = userData.mail;
+  document.querySelector(".js-phone").value = userData.phone;
+  document.querySelector(".js-linkedin").value = userData.linkedin;
+  document.querySelector(".js-github").value = userData.github;
+}
+const colorPalette1 = document.querySelector(".js-color1");
+const colorPalette2 = document.querySelector(".js-color2");
+const colorPalette3 = document.querySelector(".js-color3");
+
+function updatePallete(userData) {
+  console.log("holi caracolis update palettes");
+
+  colorPalette1.value = userData.palette;
+  colorPalette2.value = userData.palette;
+  colorPalette3.value = userData.palette;
+}

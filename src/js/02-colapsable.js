@@ -1,7 +1,18 @@
 "use strict";
 
-console.log(">> Ready :)");
+console.log("holi blanky");
+/*
+const blankyBtn = document.querySelector(".blanketfy-btn");
+const body = document.querySelector("body");
 
+function blanketfy(ev) {
+  ev.preventDefault();
+  body.classList.add("blanky-background");
+}
+
+blankyBtn.addEventListener("click", blanketfy);*/
+
+console.log(">> Ready colapsables  :)");
 const arrowUpDesign = document.querySelector(".js-arrow-up-d");
 const arrowDownDesign = document.querySelector(".js-arrow-down-d");
 
