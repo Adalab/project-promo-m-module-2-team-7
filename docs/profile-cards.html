@@ -55,7 +55,7 @@
 
             <li class="cards_box-socialmedia--item">
               <i class="far fa-envelope cards_box-icon-social js-social">
-                <a href=""></a>
+                <a class="js-preview-mail"></a>
               </i>
             </li>
 
@@ -95,15 +95,15 @@
             </div>
             <div class="radio-color">
               <label>
-                <input class="js-form js-palette color" id="color1" type="radio" value="blue" name="colors" checked />
+                <input class="js-form js-palette color js-color1" id="color1" type="radio" value="blue" name="palette" checked />
                 <img class="color-image" src="./assets/images/Blue.jpg" />
               </label>
               <label>
-                <input class="js-form js-palette color" id="color2" type="radio" value="red" name="colors" />
+                <input class="js-form js-palette color js-color2" id="color2" type="radio" value="red" name="palette" />
                 <img class="color-image" src="./assets/images/red.jpg" />
               </label>
               <label>
-                <input class="js-form js-palette color" id="color3" type="radio" value="mixedcolor" name="colors" />
+                <input class="js-form js-palette color js-color3" id="color3" type="radio" value="mixedcolor" name="palette" />
                 <img class="color-image" src="./assets/images/mixed.jpg" />
               </label>
             </div>
@@ -125,10 +125,10 @@
           <div class="fill-container">
             <label>
               Nombre completo
-              <input class="js-form formies" placeholder="Blanket Team" type="text" name="name" />
+              <input class="js-form formies js-name" placeholder="Blanket Team" type="text" name="name" />
             </label>
             <label>
-              Puesto<input class="js-form formies" placeholder="Frontend Unicorn" type="text" name="job" />
+              Puesto<input class="js-form formies js-job" placeholder="Frontend Unicorn" type="text" name="job" />
             </label>
             <p>Imagen de perfil</p>
 
@@ -140,19 +140,19 @@
 
             <div>
               <p>
-                E-mail<input class="js-form formies" placeholder="blanket@blanket.com" type="email" id="mail"
-                  name="emailAddress" />
+                E-mail<input class="js-form formies js-mail" placeholder="blanket@blanket.com" type="email" id="mail"
+                  name="mail" />
               </p>
               <p>
                 Teléfono
-                <input class="js-form js-preview-phone formies" placeholder="000000000" type="tel" id="phone" name="tel" />
+                <input class="js-form js-preview-phone formies js-phone" placeholder="000000000" type="tel" id="phone" name="phone" />
               </p>
               <p>
-                Linkedin<input class="js-form formies" placeholder="Blanket.Linkedin" type="text"
+                Linkedin<input class="js-form formies js-linkedin" placeholder="Blanket.Linkedin" type="text"
                   name="linkedin" />
               </p>
               <p>
-                Github<input class="js-form formies" placeholder="Blanket.GitHub" type="text"
+                Github<input class="js-form formies js-github" placeholder="Blanket.GitHub" type="text"
                   name="github" />
               </p>
             </div>
@@ -176,8 +176,11 @@
           </div>
           <div class="card-done js-hidden">
             <p class="tarjeta">La tarjeta ha sido creada:</p>
-            <p class="url">https://awesome-profile-card.com?id=A456DF0001</p>
-            <button class="twitter-share"><i class="fab fa-twitter list-icon2c"></i>Compartir en twitter
+            <p class="url js-generate"></p>
+            <button class="twitter-share" type="button">
+             <!-- <i class="fab fa-twitter list-icon2c"></i>
+              Compartir en twitter
+             <a class="js-twitter-link" title="Twitter"></a> -->
             </button>
           </div>
         </div>
