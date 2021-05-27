@@ -1,17 +1,3 @@
-"use strict";
-
-/* Form */
-
-const formInputList = document.querySelectorAll(".js-form");
-const previewNameElement = document.querySelector(".js-preview-name");
-const previewJobElement = document.querySelector(".js-preview-job");
-const previewMailElement = document.querySelector(".js-preview-mail");
-const previewPhoneElement = document.querySelector(".js-preview-phone");
-const previewLinkedinElement = document.querySelector(".js-preview-linkedin");
-const previewGithubElement = document.querySelector(".js-preview-github");
-const cardPreview = document.querySelector(".js-card_box");
-const paletteRadios = document.querySelectorAll(".js-palette");
-
 let data = {
   palette: "",
   name: "",
@@ -57,22 +43,6 @@ function handleChangeForm(ev) {
   }
 
   saveInLocalStorage();
-
-  /*
-  const inputChanged = ev.target;
-  const changedValue = inputChanged.value;
-  if (inputChanged.name === "name") {
-    previewNameElement.innerHTML = changedValue;
-  } else if ( inputChanged.name === "job") {
-    previewJobElement.innerHTML = changedValue;
-  
-  
-  } else if (inputChanged.name === "linkedin") {
-    previewLinkedinElement.href = changedValue;
-  }
-  console.log("Target", ev.target);
-  console.log("Current Target", ev.currentTarget);
-*/
 }
 
 for (const eachInput of formInputList) {

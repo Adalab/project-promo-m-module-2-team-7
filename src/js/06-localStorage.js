@@ -1,5 +1,4 @@
 function saveInLocalStorage() {
-  console.log(data);
   const userData = JSON.stringify(data);
   localStorage.setItem("userData", userData);
 }
